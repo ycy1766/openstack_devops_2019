@@ -15,7 +15,7 @@ resource "openstack_blockstorage_volume_v2" "test_vol" {
   region      = "RegionOne"
   name        = "cirros_vol"
   description = "test-cy"
-  image_id    = "${var.packer_image_name}""
+  image_id    = "${var.packer_image_name}"
   size        = 3
 }
 
