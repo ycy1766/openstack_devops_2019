@@ -8,7 +8,7 @@
             "password": "adminpassword",
             "identity_endpoint": "http://10.10.10.100:35357/v3",
             "region": "RegionOne",
-            "tenant_id": "admin",
+            "tenant_id": "",
             "tenant_name": "admin",
             "image_name": "packer-2",
             "ssh_username": "centos",
