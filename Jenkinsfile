@@ -1,12 +1,13 @@
-node('', {
-  stage('Openstack_auth', {
-    sh ' . /etc/admin-openrc.sh'
-  })
-})
 
 stage('Checkout', {
   node('', {
     checkout scm
+  })
+})
+
+node('', {
+  stage('Openstack_auth', {
+    sh ' . /etc/admin-openrc.sh'
   })
 })
 
