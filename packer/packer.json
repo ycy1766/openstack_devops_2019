@@ -9,6 +9,7 @@
             "identity_endpoint": "http://10.10.10.100:35357/v3",
             "region": "RegionOne",
             "tenant_id": "admin",
+            "tenant_name": "admin",
             "image_name": "centos7_with_packer-2",
             "ssh_username": "centos",
             "source_image": "d1569c30-7177-4b7b-9214-ce41cdc05b04",
