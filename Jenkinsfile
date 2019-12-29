@@ -7,7 +7,7 @@ stage('Checkout', {
 
 stage('test', {
   node('', {
-    sh 'ls packer'
+    sh 'source  /etc/kolla/admin-openrc.sh '
   })
 })
 
