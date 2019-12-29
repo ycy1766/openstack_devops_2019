@@ -1,4 +1,8 @@
-
+node('', {
+  stage('Openstack_auth', {
+    sh ' . /etc/admin-openrc.sh'
+  })
+})
 
 stage('Checkout', {
   node('', {
@@ -6,11 +10,6 @@ stage('Checkout', {
   })
 })
 
-node('', {
-  stage('Openstack_auth', {
-    sh 'sh ./openstack.rc'
-  })
-})
 // stage('example3', {
 //   node('', {
 //     sh '$ env | grep OS_'
@@ -19,6 +18,6 @@ node('', {
 
 stage('Build_image', {
   node('', {
-    sh 'packer build -color=false packer/packer.json '
+    sh 'packer build -color=false -debug  packer/packer.json '
   })
 })
