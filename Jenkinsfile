@@ -1,6 +1,6 @@
 node('', {
-  stage('example1', {
-    sh ' terraform --version'
+  stage('Openstack_auth', {
+    sh ' source /etc/admin-openrc.sh'
   })
 })
 
