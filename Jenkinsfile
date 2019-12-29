@@ -14,6 +14,6 @@ stage('test', {
 
 stage('Build_image', {
   node('', {
-    sh 'packer build -color=false -debug  packer/packer.json '
+    sh 'packer build -color=false packer/packer.json '
   })
 })
