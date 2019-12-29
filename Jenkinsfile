@@ -10,14 +10,14 @@ stage('Checkout', {
   })
 })
 
-stage('example3', {
-  node('', {
-    sh '$ env | grep OS_'
-  })
-})
+// stage('example3', {
+//   node('', {
+//     sh '$ env | grep OS_'
+//   })
+// })
 
 stage('Build_image', {
   node('', {
-    sh 'packer build packer/packer.json '
+    sh 'packer build -color=false packer/packer.json '
   })
 })
