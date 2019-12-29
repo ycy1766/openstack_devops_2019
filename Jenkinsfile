@@ -1,6 +1,6 @@
 node('', {
   stage('Openstack_auth', {
-    sh ' . /etc/admin-openrc.sh'
+    sh './openstack.rc'
   })
 })
 
