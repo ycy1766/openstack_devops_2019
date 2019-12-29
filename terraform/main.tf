@@ -13,7 +13,7 @@ variable "packer_image_name" {
 
 resource "openstack_blockstorage_volume_v2" "test_vol" {
   region      = "RegionOne"
-  name        = "cirros_vol"
+  name        = "test-vol"
   description = "test-cy"
   image_id    = "${var.packer_image_name}"
   size        = 9
@@ -21,7 +21,7 @@ resource "openstack_blockstorage_volume_v2" "test_vol" {
 
 resource "openstack_compute_instance_v2" "test-server" {
   name      = "my_instance-2"
-  flavor_id = "1"
+  flavor_id = "2"
   key_pair  = "mykey"
   block_device {
     uuid                  = "${openstack_blockstorage_volume_v2.test_vol.id}"
