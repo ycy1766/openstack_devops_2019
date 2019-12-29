@@ -16,7 +16,7 @@ resource "openstack_blockstorage_volume_v2" "test_vol" {
   name        = "cirros_vol"
   description = "test-cy"
   image_id    = "${var.packer_image_name}"
-  size        = 3
+  size        = 9
 }
 
 resource "openstack_compute_instance_v2" "test-server" {
