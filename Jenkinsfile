@@ -9,9 +9,9 @@ stage('Checkout', {
     checkout scm
   })
 })
-stage('example2', {
+stage('Build_image', {
   node('', {
-    sh 'ls'
+    sh 'packer build packer/packer.json '
   })
 })
 

@@ -1,0 +1,30 @@
+{
+    "builders": [
+        {
+            "type": "openstack",
+            "username": "admin",
+            "password": "adminpassword",
+            "identity_endpoint": "http://10.10.10.100:35357/v3",
+            "region": "RegionOne",
+            "tenant_id": "",
+            "image_name": "centos7_with_packer-2",
+            "ssh_username": "centos",
+            "source_image": "d1569c30-7177-4b7b-9214-ce41cdc05b04",
+            "flavor": "2",
+            "ssh_ip_version": "4", 
+            "use_blockstorage_volume": true,
+            "volume_size": 9,
+            "networks": [
+                "b0dd18e6-b0e0-4e62-9805-d7da190aa24d"
+            ],
+            "floating_ip_network": "public1"
+        }
+    ],
+    "provisioners": [
+        {
+            "script": "packer/setup_vm.sh",
+            "type": "shell"
+        }
+    ]
+}
+[root@train-deploy001 d
