@@ -1,8 +1,4 @@
-node('', {
-  stage('Openstack_auth', {
-    sh './openstack.rc'
-  })
-})
+
 
 stage('Checkout', {
   node('', {
@@ -10,6 +6,11 @@ stage('Checkout', {
   })
 })
 
+node('', {
+  stage('Openstack_auth', {
+    sh './openstack.rc'
+  })
+})
 // stage('example3', {
 //   node('', {
 //     sh '$ env | grep OS_'
