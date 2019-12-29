@@ -6,11 +6,11 @@ stage('Checkout', {
 })
 
 
-// stage('Build_image', {
-//   node('', {
-//     sh 'source  /etc/kolla/admin-openrc.sh  && /usr/local/bin/packer  build -color=false packer/packer.json '
-//   })
-// })
+stage('Build_image', {
+  node('', {
+    sh 'source  /etc/kolla/admin-openrc.sh  && /usr/local/bin/packer  build -color=false packer/packer.json '
+  })
+})
 
 
 stage('Deploy_instance', {
