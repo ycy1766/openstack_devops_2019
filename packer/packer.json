@@ -4,7 +4,7 @@
             "type": "openstack",
             "username": "admin",
             "domain_id": "default",
-            "domain_name" : "Default",    
+            "domain_name" : "default",    
             "password": "adminpassword",
             "identity_endpoint": "http://10.10.10.100:35357/v3",
             "region": "RegionOne",
