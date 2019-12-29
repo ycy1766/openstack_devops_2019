@@ -5,11 +5,11 @@ stage('Checkout', {
   })
 })
 
-node('', {
-  stage('Openstack_auth', {
-    sh ' . /etc/admin-openrc.sh'
-  })
-})
+// node('', {
+//   stage('Openstack_auth', {
+//     sh ' . /etc/admin-openrc.sh'
+//   })
+// })
 
 // stage('example3', {
 //   node('', {
