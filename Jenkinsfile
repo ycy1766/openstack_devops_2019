@@ -6,6 +6,6 @@ node('', {
 
 stage('example2', {
   node('', {
-    sh ' ls -al'
+    sh 'pwd'
   })
 })
