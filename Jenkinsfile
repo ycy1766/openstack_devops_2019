@@ -9,14 +9,15 @@ stage('Checkout', {
     checkout scm
   })
 })
-stage('Build_image', {
-  node('', {
-    sh 'packer build packer/packer.json '
-  })
-})
 
 stage('example3', {
   node('', {
-    sh 'pwd'
+    sh '$ env | grep OS_'
+  })
+})
+
+stage('Build_image', {
+  node('', {
+    sh 'packer build packer/packer.json '
   })
 })
