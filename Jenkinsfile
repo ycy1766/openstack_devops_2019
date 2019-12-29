@@ -4,11 +4,18 @@ node('', {
   })
 })
 
-stage('Checkout') {
-    // Get some code from a Git repository
+stage('Checkout', {
+  node('', {
     checkout scm
-}
+  })
+})
 stage('example2', {
+  node('', {
+    sh 'ls'
+  })
+})
+
+stage('example3', {
   node('', {
     sh 'pwd'
   })
