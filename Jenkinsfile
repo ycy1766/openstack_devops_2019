@@ -6,6 +6,6 @@ node('', {
 
 stage('example2', {
   node('', {
-    echo ""
+    sh ' ls -al'
   })
 })
