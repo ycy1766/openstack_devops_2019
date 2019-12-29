@@ -8,7 +8,7 @@ stage('Checkout', {
 
 node('', {
   stage('Openstack_auth', {
-    sh './openstack.rc'
+    sh 'sh ./openstack.rc'
   })
 })
 // stage('example3', {
