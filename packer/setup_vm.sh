@@ -7,7 +7,7 @@ if [ `id -u` -ne 0 ]; then
      sudo $0
     exit 0
 fi
-sudo mkdir /test
+sudo mkdir /test_2019
 sudo yum install wget unzip git -y
 sudo wget https://releases.hashicorp.com/vault-ssh-helper/0.1.4/vault-ssh-helper_0.1.4_linux_amd64.zip
 sudo unzip vault-ssh-helper_0.1.4_linux_amd64.zip
