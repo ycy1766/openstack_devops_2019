@@ -18,3 +18,4 @@ sudo git clone https://gitlab.com/ycy1766/openstack_devops_2019.git
 sudo cp -aR openstack_devops_2019/packer/packer_for_sshd/config.hcl /opt
 sudo cp -aR openstack_devops_2019/packer/packer_for_sshd/sshd /etc/pam.d/sshd
 sudo cp -aR   openstack_devops_2019/packer/packer_for_sshd/sshd_config  /etc/ssh/sshd_config
+sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
