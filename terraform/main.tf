@@ -7,9 +7,10 @@ provider "openstack" {
   region      = "RegionOne"
 }
 
-data "terraform_remote_state" "local_etcd" {
-  backend = "etcdv3"
-  config = {
+
+
+terraform {
+  backend "etcdv3" {
     endpoints = ["10.10.10.11:2379"]
     lock      = true
     prefix    = "terraform-state/"
