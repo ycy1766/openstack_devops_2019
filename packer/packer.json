@@ -9,7 +9,7 @@
             "tenant_id": "",
             "image_name": "packer-2",
             "ssh_username":  "centos",
-            "source_image": "d1569c30-7177-4b7b-9214-ce41cdc05b04",
+            "source_image": "fc31e8fd-b8ac-481c-a1e6-12400b9bd38a",
             "flavor": "2",
             "ssh_ip_version": "4", 
             "use_blockstorage_volume": true,
