@@ -7,6 +7,16 @@ provider "openstack" {
   region      = "RegionOne"
 }
 
+data "terraform_remote_state" "local_etcd" {
+  backend = "etcdv3"
+  config = {
+    endpoints = ["10.10.10.11:2379"]
+    lock      = true
+    prefix    = "terraform-state/"
+  }
+}
+
+
 variable "packer_image_name" {
   description = "packer_image_name"
 }
@@ -32,8 +42,8 @@ resource "openstack_compute_instance_v2" "test-server" {
     delete_on_termination = true
   }
   network {
-    uuid = "b0dd18e6-b0e0-4e62-9805-d7da190aa24d"
-    name = "private"
+    uuid = "8c9b5765-db7a-4621-9391-3343ee7a286a"
+    name = "private-net"
   }
 }
 
@@ -47,3 +57,4 @@ resource "openstack_compute_floatingip_associate_v2" "fip_1" {
   floating_ip = "${openstack_networking_floatingip_v2.fip_1.address}"
   instance_id = "${openstack_compute_instance_v2.test-server.id}"
 }
+
