@@ -15,7 +15,7 @@
             "use_blockstorage_volume": true,
             "volume_size": 9,
             "networks": [
-                "b0dd18e6-b0e0-4e62-9805-d7da190aa24d"
+                "8c9b5765-db7a-4621-9391-3343ee7a286a"
             ],
             "floating_ip_network": "public1"
         }
